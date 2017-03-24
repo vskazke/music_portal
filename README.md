@@ -4,12 +4,14 @@ Install
 ### Both dev and prod
 
 Install python dependencies:
+    python3 -m venv env
+    source env/bin/activate
 
     pip install -r music_portal/settings/requirements.txt
 
 Create postgres datapbase:
 
-    createdb spotify_parser
+    createdb musicants
 
 Create tables:
 
