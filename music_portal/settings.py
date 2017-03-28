@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'musicants',
+    'music_portal',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #  'django.contrib.contenttypes',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
@@ -77,9 +79,13 @@ WSGI_APPLICATION = 'music_portal.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
+    #  'default': {
+        #  'ENGINE': 'django.db.backends.postgresql',
+        #  'NAME': 'musicant',
+    #  },
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'musicant',
+        'NAME': 'music_portal',
     }
 }
 

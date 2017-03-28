@@ -3,8 +3,8 @@ from .models import *
 
 
 class Musicant(forms.ModelForm):
-          
     class Meta:
         model = Musicant
-        exclude = ['']
+        exclude = ['pub_date']
+
 

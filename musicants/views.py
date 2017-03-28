@@ -6,10 +6,9 @@ from .forms import Musicant
 
 def musicants(request):
     form = Musicant(request.POST or None)
-    #  form_captcha = DemoForm(request.POST or None)
     if request.method == "POST" and form.is_valid():
         new_form = form.save()
-        print(form.cleaned_data)
+        print(form)
 
     return render(request, 'new_musicant.html', locals())
 

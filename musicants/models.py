@@ -1,7 +1,5 @@
 from django.db import models
-import datetime
-
-now = datetime.datetime.now()
+from django.utils import timezone
 
 
 class Musicant(models.Model):
@@ -9,4 +7,6 @@ class Musicant(models.Model):
     email = models.EmailField()
     type_of_music = models.CharField('Направление музыки', max_length=100, default='')
     instrument = models.CharField('Музыкальный инструмент', max_length=200, default='')
-    pub_date = models.DateTimeField('date published', default=datetime.datetime.now())
+    pub_date = models.DateTimeField('date published', default=timezone.now())
+
+
