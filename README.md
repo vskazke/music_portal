@@ -4,6 +4,7 @@ Install
 ### Both dev and prod
 
 Install python dependencies:
+
     python3 -m venv env
     source env/bin/activate
 
@@ -11,7 +12,7 @@ Install python dependencies:
 
 Create postgres datapbase:
 
-    createdb musicants
+    createdb music_portal
 
 Create tables:
 
