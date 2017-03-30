@@ -9,6 +9,7 @@ from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^login/', views.login, name='login'),
+    url(r'^singin/', views.sing_in, name='sing_in'),
     url(r'^musicants/', include('musicants.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login/$', auth_views.login, {'template_name': 'login.html'}),
