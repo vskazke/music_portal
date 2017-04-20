@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-4 col-md-offset-4'>
+                <h1>Объявление музыканта</h1>
+            <form action='' method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="fieldWrapper">
+                        {{ field.errors }}
+                        {{ field.label_tag }} {{ field }}
+                    </div>
+                {% endfor %}
+                <button class='submit' type="submit" name ="save">Сохранить</button>
+                {% if musicant.public %}
+                    <button class="btn" name="unpublic">Убрать из опубликованных</button>
+                {% else %}
+                    <button class="btn" name="public">Опубликовать</button>
+                {% endif %}
+                <button class="btn" name="delete">Удалить</button>
+            </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

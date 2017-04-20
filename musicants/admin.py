@@ -2,4 +2,8 @@ from django.contrib import admin
 
 from .models import *
 
-admin.site.register(Musicant)
+class MusicantAdmin(admin.ModelAdmin):
+    fieldsets = []
+
+admin.site.register(Musicant, MusicantAdmin)
+

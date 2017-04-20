@@ -59,7 +59,8 @@ ROOT_URLCONF = 'music_portal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), 
+                 os.path.join(BASE_DIR, 'env/lib/python3.5/site-packages/django/contrib/admin')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

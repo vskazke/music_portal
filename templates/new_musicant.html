@@ -8,10 +8,16 @@
         </div>
         <div class='row'>
             <div class='col-md-12'>
-            <form action='' method="post">
+                <form action="" method="post">
                 {% csrf_token %}
+                {% if form.errors %}
+                    <p>Обязательное поле ввода</p>
+                {% endif %}
+
                 {{ form.as_p }}
-                <button class='submit' type="submit">Добавить</button>
+                <button class='submit' name="save" type="submit">Сохранить</button>
+                <button class='submit' name="public" type="submit">Опубликовать</button>
+                <!-- <button class='submit' type="submit">Опубликовать</button> -->
             </form>
 
             </div>

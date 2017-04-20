@@ -11,6 +11,8 @@ urlpatterns = [
     url(r'^login/', views.login, name='login'),
     url(r'^singin/', views.sing_in, name='sing_in'),
     url(r'^musicants/', include('musicants.urls')),
+    #  url(r'^musicants_list/$', include('musicants.urls')),
+    #  url(r'^musicants/(?P<musicant_id>[0-9]+)/$', include('musicants.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login/$', auth_views.login, {'template_name': 'login.html'}),
     #  url(r'^accounts/login/$',  TemplateView.as_view(template_name="login.html")),
